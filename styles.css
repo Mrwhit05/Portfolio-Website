@@ -1,0 +1,246 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #181719;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(112, 22, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    background-color: rgb(112, 22, 22);
+    color: white;
+    padding: 17px 5vw;
+    text-align: center;
+    justify-content: space-between;
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #181719;
+}
+
+nav a:active {
+    background-color: #3a3d40;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section h1 {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-section > p {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    color: rgb(112, 22, 22);
+}
+
+.projects-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.project-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.project-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project-text {
+    font-size: 20px;
+    margin-left: 5vw;
+}
+
+.project-name {
+    font-size: 35px; 
+}
+
+.contact-header {
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.contact-desc {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+} 
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+input, textarea {
+    background-color: #3a3d40;
+    border: 1px solid #3a3d40;
+    color: #ffffff;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: rgb(112, 22, 22);
+    border-color: white;
+    min-width: 300px;
+}
+
+footer {
+    background-color: #3a3d40;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;  
+    width: 100%;
+    height: 50px;
+    justify-content: space-evenly;
+}
+
+.social-icons a:active {
+    color: white;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.social-icons a:visited {
+    color: white;
+}
+
+.social-icons a:link {
+    color: white;
+}
+
+.about-header {
+    text-align: center;    
+    font-size: 50px;
+}
+
+.about-desc {
+    font-size: 20px;
+    padding: 5vh 20vw;
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.languages p {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+.header {
+    background-color: rgb(112, 22, 22);
+}
+*/
