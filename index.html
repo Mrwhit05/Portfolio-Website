@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio Website">
-    <title>Portfolio</title>
+    <title>Jimmy Whitley | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
     <script src="https://kit.fontawesome.com/f0238ac82c.js" crossorigin="anonymous"></script>
@@ -14,6 +14,12 @@
       <section id="welcome-section" class="welcome-section">
         <h1>Hello, I am Jimmy</h1>
         <p>a computer science student</p>
+        <!--
+        <div class="resume-link">
+          <a class="resume-preview" target="_blank" href="assets/resume.pdf">Click to View Resume</a>
+          <a class="resume-download" href="assets/resume.pdf" download="Jimmy Whitley - Resume"><i class="fa-solid fa-download"></i></a>
+        </div>
+      -->
       </section>
       <header>
         <nav id="navbar" class="nav"> 
@@ -36,7 +42,10 @@
       <section id="about" class="about">
         <h2 class="about-header header">About</h2>
         <div class="about-desc">
-          <p>Currently I am a student at Mississippi State University. I aim for a career in software development. I am passionate about all things computers. If I'm not at my computer, I am likely reading or drawing. </p>
+          <p>Currently I am a student at Mississippi State University. 
+            I aim for a career in software development. 
+            I am passionate about all things computers. 
+            If I'm not at my computer working on code or playing video games, I am likely reading or drawing. </p>
         </div>
         <div class="languages">
           <div class="lang-tile">
@@ -44,7 +53,8 @@
             <p>Python</p>
           </div>
           <div class="lang-tile">
-            <img class="cpp-icon" src="https://img.icons8.com/?size=100&id=55199&format=png&color=ffffff">
+            <!--<img class="cpp-icon" src="https://img.icons8.com/?size=100&id=55199&format=png&color=ffffff">-->
+            <img class="cpp-icon" src="assets/cpp logo.png">
             <p>C++</p>
           </div>
           <div class="lang-tile">
@@ -60,19 +70,24 @@
             <p>CSS</p>
           </div>
         </div>
+        <div class="resume-link">
+          <a class="resume-preview" target="_blank" href="assets/resume.pdf">Click to View Resume</a>
+          <a class="resume-download" href="assets/resume.pdf" download="Jimmy Whitley - Resume"><i class="fa-solid fa-download"></i></a>
+        </div>
       </section>
       <section id="projects" class="projects">
         <h2 class="projects-header header">Projects</h2>
         <div class="projects-list">
           <div class="project-tile">
             <div class="project-image">
-              <a class="project-link" href="" target="_blank">
+              <a class="project-link" href="https://jimmy-whitley.com/" target="_blank">
                 <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="alt text">
               </a> 
             </div>
             <div class="project-text"> 
-              <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <h3 class="project-name">Portfolio Website</h3>
+              <p class="project-desc">A personal portfolio website designed to display information about me, my projects, and skill set.</p>
+              <p class="project-desc">Languages used: HTML5, CSS3</p>
             </div>
           </div> 
           <div class="project-tile">
@@ -97,6 +112,7 @@
               <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
             </div>
           </div> 
+          <!--
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
@@ -163,26 +179,30 @@
               <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
             </div>
           </div> 
+          -->
       </section>
-      <section id="links" class="links">
+      <section id="contact" class="contact">
         <h2 class="contact-header header">Contact Me</h2>
-        <p class="contact-desc">Have a question or want to work together. Leave your information below and I'll get back to you as soon as possible. 
-        </p>
-        <!--Form needs an action before it can function-->
-        <form method="post" action="">
-          <fieldset>
-            <label for="name">
-              <input id="name" name="name" type="text" placeholder="Name" required>
-            </label>
-            <label for="email">
-              <input id="email" name="email" type="email" placeholder="Email" required>
-            </label>
-            <label for="message">
-              <textarea id="message" name="message" rows="4" cols="30" placeholder="Message"></textarea>
-            </label>
-          </fieldset>
-          <input type="submit" value="Submit">
-        </form>
+        <!--<p class="contact-desc" >Have a question or want to work together. Leave your information below and I'll get back to you as soon as possible. 
+        </p>-->
+        <div class="contact-container">
+          <form method="post" action="https://api.web3forms.com/submit">
+            <input type="hidden" name="access_key" value="fc34d456-955e-4671-a5e2-7643c5135562">
+            <fieldset>
+              <label for="name">
+                <input id="name" name="name" type="text" placeholder="Name" required>
+              </label>
+              <label for="email">
+                <input id="email" name="email" type="email" placeholder="Email" required>
+              </label>
+              <label for="message">
+                <textarea id="message" name="message" placeholder="Message"></textarea>
+              </label>
+            </fieldset>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
       </section>
     </main>
     <footer>

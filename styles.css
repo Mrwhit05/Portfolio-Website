@@ -1,5 +1,5 @@
 @media (prefers-reduced-motion: no-preference) {
-    * {
+    html {
       scroll-behavior: smooth;
     }
 }
@@ -8,7 +8,6 @@
     font-family: sans-serif;
     box-sizing: border-box;
     color: white;
-
 }
 
 a {
@@ -21,16 +20,27 @@ body {
 }
 
 header {
+    /*
     width: 100%;
-    height: 50px;
+    height: 5.056vw;
     background-color: rgb(112, 22, 22);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
+    */
+    display: flex;
+    position: sticky;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: rgb(112, 22, 22);
+    position: sticky;
+    top: 0;
+    
 }
 
+/*
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -39,33 +49,49 @@ header {
     left: 0;
     width: 100%;
     background: var(--main-red);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    /*box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);*//*
     z-index: 10;
 }
+*/
 
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align the list to the right */
+    padding: 15px;
+    background-color: rgb(112, 22, 22);
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 95%;
+}
 
 nav li {
-    display: inline-block;
+   /*display: inline-block;*/
+   margin: 0 10px;
 }
 
 nav a {
+    padding: 1.74vw 5vw 1.79vw;
     background-color: rgb(112, 22, 22);
     color: white;
-    padding: 17px 5vw;
-    text-align: center;
-    justify-content: space-between;
-}
-
-nav a:link {
-    text-decoration: none;
+    font-size: 1.172vw;
+    /*text-align: center;*/
 }
 
 nav a:hover {
     background-color: #181719;
+    box-shadow: 0 2px 0 #181719;
 }
 
 nav a:active {
     background-color: #3a3d40;
+    
 }
 
 .welcome-section {
@@ -81,7 +107,7 @@ nav a:active {
 }
 
 .welcome-section h1 {
-    font-size: 50px;
+    font-size: 5.056vw;
     padding: 0;
     margin: 0;
 }
@@ -89,40 +115,72 @@ nav a:active {
 .welcome-section > p {
     padding: 0;
     margin: 0;
-    font-size: 30px;
+    font-size: 3.033vw;
     color: rgb(112, 22, 22);
 }
 
-.projects-header {
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+
     text-align: center;
-    font-size: 50px;
+}
+
+.projects-header {
+    width: 100%;
+    font-size: 5.056vw;
+    margin-bottom: 20px;
 }
 
 .project-tile {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 7.813vw;
+    max-height:7.813vw;
+    object-fit: cover;
+    margin-right: 15px;
+    border-right: 8px;
 }
 
 .project-text {
-    font-size: 20px;
-    margin-left: 5vw;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.project-text p {
+    font-size: 2.022vw;
+    line-height: 1.5;
 }
 
 .project-name {
-    font-size: 35px; 
+    font-size: 3.539vw; 
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contact-header {
-    text-align: center;
-    font-size: 50px;
-
+    font-size: 5.056vw;
 }
 
 .contact-desc {
@@ -130,10 +188,16 @@ nav a:active {
     justify-content: center;
 }
 
+.contact-container {
+    padding: 20px;
+    max-width: 39.063vw;
+    width: 60%;
+}
+
 form {
     width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
+    max-width: 39.063vw;
+    min-width: 11.719vw;
     margin: 0 auto;
     padding-bottom: 2em;
 } 
@@ -142,6 +206,8 @@ fieldset {
     border: none;
     padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f;
+    display: block;
+    justify-content: center;
 }
 
 fieldset:last-of-type {
@@ -153,18 +219,27 @@ label {
     margin: 0.5rem 0;
 }
 
+input, textarea {
+    background-color: #3a3d40;
+    border: 1px solid #3a3d40;
+    color: #ffffff;
+
+    width: 100%;
+    padding: 0.8rem;
+}
+
 input,
 textarea,
 select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
+    font-size: 2vw;
 }
 
-input, textarea {
-    background-color: #3a3d40;
-    border: 1px solid #3a3d40;
-    color: #ffffff;
+textarea {
+    resize: vertical;
+    height: 19.531vw;
 }
 
 .inline {
@@ -177,22 +252,23 @@ input[type="submit"] {
     display: block;
     width: 60%;
     margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
+    height: 3.906vw;
+    font-size: 2.022vw;
     background-color: rgb(112, 22, 22);
     border-color: white;
-    min-width: 300px;
+    min-width: 11.719vw;
 }
 
 footer {
     background-color: #3a3d40;
+    height: 5.056vw;
 }
 
 .social-icons {
     display: flex;
     align-items: center;  
     width: 100%;
-    height: 50px;
+    height: 5.056vw;
     justify-content: space-evenly;
 }
 
@@ -214,11 +290,11 @@ footer {
 
 .about-header {
     text-align: center;    
-    font-size: 50px;
+    font-size: 5.056vw;
 }
 
 .about-desc {
-    font-size: 20px;
+    font-size: 2.022vw;
     padding: 5vh 20vw;
 }
 
@@ -229,9 +305,10 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    max-width: 1400px;
+    max-width: 54.688vw;
     margin: 0 auto;
     padding: 20px 10px;
+    font-size: 1.172vw;
 }
 
 .languages p {
@@ -239,8 +316,178 @@ footer {
     justify-content: center;
 }
 
-/*
-.header {
-    background-color: rgb(112, 22, 22);
+.cpp-icon {
+    height: 7.813vw;
 }
-*/
+
+.resume-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.022vw;
+}
+
+.resume-preview {
+    display: inline-block;
+    padding: 5px;
+}
+
+.resume-download {
+    margin-right: 8px;
+}
+
+  /* Media Queries for responsiveness */
+@media (max-width: 1760px) {
+    nav a {
+        padding: 2.2vw 5vw 2.227vw;
+    }
+}
+
+@media (max-width: 1440px){
+    nav a {
+        padding: 2.430vw 5vw 2.395vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav a {
+        font-size: 3vw;
+        padding: 3.4vw 5vw 3.3vw
+    }
+
+    .welcome-section h1 {
+        font-size: 8vw;
+    }
+
+    .projects-header {
+        font-size: 7vw;
+    }
+
+    .project-name {
+        font-size: 5vw;
+    }
+
+    .contact-header {
+        font-size: 7vw;
+    }
+
+    .contact-desc {
+        font-size: 4vw;
+    }
+
+    .about-header {
+        font-size: 7vw;
+    }
+
+    .about-desc {
+        font-size: 4vw;
+    }
+
+    .languages {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 3vw;
+        padding: 4.7vw 5vw 4.45vw;
+    }
+
+    .welcome-section h1 {
+        font-size: 1vw;
+    }
+
+    .welcome-section > p {
+        font-size: 5vw;
+    }
+
+    .projects-header {
+        font-size: 8vw;
+    }
+
+    .project-name {
+        font-size: 6vw;
+    }
+
+    .contact-header {
+        font-size: 8vw;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .about-header {
+        font-size: 8vw;
+    }
+
+    .about-desc {
+        font-size: 5vw;
+        padding: 5vh 5vw;
+    }
+
+    .languages {
+        font-size: 5vw;
+    }
+
+    .cpp-icon {
+        height: 15vw;
+    }
+
+    input[type="submit"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 3vw;
+        padding: 9vw 5vw 8vw;
+    }
+
+    .welcome-section h1 {
+        font-size: 12vw;
+    }
+
+    .welcome-section > p {
+        font-size: 6vw;
+    }
+
+    .projects-header {
+        font-size: 10vw;
+    }
+
+    .project-name {
+        font-size: 8vw;
+    }
+
+    .contact-header {
+        font-size: 10vw;
+    }
+
+    .contact-container {
+        width: 95%;
+    }
+
+    .about-header {
+        font-size: 10vw;
+    }
+
+    .about-desc {
+        font-size: 6vw;
+        padding: 5vh 2vw;
+    }
+
+    .languages {
+        font-size: 6vw;
+    }
+
+    .cpp-icon {
+        height: 20vw;
+    }
+
+    input[type="submit"] {
+        width: 90%;
+    }
+}
