@@ -155,10 +155,11 @@ nav a:active {
     */
     min-width: 20vw;
     min-height: 20vw;
-
+    
     max-width: 24vw;
     max-height: 24vw;
-    object-fit: cover;
+    /*object-fit: cover;*/
+    object-fit: scale-down;
     margin-right: 15px;
     border-right: 8px;
 }
