@@ -1,0 +1,50 @@
+<!DOCYTPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Javascript Calculator</title>
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="vars">
+                <span class="result"><strong><span id="resultText">0</span></strong></span>
+            </div>
+            <div class="inputs">
+                <div id="row1">
+                    <button id="clear">C</button>
+                    <button id="posNeg">+/-</button>
+                    <button id="percentage">%</button>
+                    <button id="division">/</button>
+                </div>
+                <div id="row2">
+                    <button id="seven" onclick="updateNum('7')">7</button>
+                    <button id="eight" onclick="updateNum('8')">8</button>
+                    <button id="nine" onclick="updateNum('9')">9</button>
+                    <button id="multiplication" onclick="">x</button>
+                </div>
+                <div class="row3">
+                    <button id="four" onclick="updateNum('4')">4</button>
+                    <button id="five" onclick="updateNum('5')">5</button>
+                    <button id="six" onclick="updateNum('6')">6</button>
+                    <button id="subtraction" onclick="">-</button>
+                </div>
+                <div class="row4">
+                    <button id="one" onclick="updateNum('1')">1</button>
+                    <button id="two" onclick="updateNum('2')">2</button>
+                    <button id="three" onclick="updateNum('3')">3</button>
+                    <button id="addition" onclick="">+</button>
+                </div>
+                <div class="row5">
+                    <button id="zero" onclick="updateNum('0')">0</button>
+                    <button id="decimal" onclick="">.</button>
+                    <button id="equals" onclick="equate(operator)">=</button>
+                </div>
+            </div>
+            <div class="signature">JI-84
+
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
