@@ -15,12 +15,6 @@
       <section id="welcome-section" class="welcome-section">
         <h1>Hello, I am Jimmy</h1>
         <p>a computer science student</p>
-        <!--
-        <div class="resume-link">
-          <a class="resume-preview" target="_blank" href="assets/resume.pdf">Click to View Resume</a>
-          <a class="resume-download" href="assets/resume.pdf" download="Jimmy Whitley - Resume"><i class="fa-solid fa-download"></i></a>
-        </div>
-      -->
       </section>
       <header>
         <nav id="navbar" class="nav"> 
@@ -38,12 +32,25 @@
               <a href="#contact">Contact</a>
               </li>
           </ul>
+
+          <button id="menu-button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <script>
+            const menuButton = document.getElementById("menu-button");
+            const navList = document.querySelector(".nav-list");
+
+            menuButton.addEventListener("click", () => {
+              navList.classList.toggle("open");
+            });
+          </script>
+
         </nav>
     </header>
       <section id="about" class="about">
-        <h2 class="about-header header">About</h2>
+        <h2 class="about-header section-headers">About</h2>
         <div class="about-desc">
-          <p>I'm a Computer Science student at Mississippi State University, and I'm working toward a career in software development. 
+          <p class="body-text">I'm a Computer Science student at Mississippi State University, and I'm working toward a career in software development. 
             I'm all about computers—whether it's coding, building cool projects, or just playing video games. 
             When I'm not at my computer, you can usually find me reading or doodling. 
             I'm always learning something new, and I'm excited to see where this tech journey takes me!</p>
@@ -97,34 +104,33 @@
         </div>
       </section>
       <section id="projects" class="projects">
-        <h2 class="projects-header header">Projects</h2>
+        <h2 class="projects-header section-headers">Projects</h2>
         <div class="projects-list">
-
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="https://github.com/Mrwhit05/Portfolio-Website" target="_blank">
-                <img class="project-img" src="assets/portfolio website thumbnail.png" alt="thumbnail image of portfolio website">
+                <img class="project-img" src="assets/portfolio website thumbnail.png" alt="thumbnail image of portfolio website" loading="lazy">
                 <div class="project-hover-text">GitHub</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Portfolio Website</h3>
-              <p class="project-desc">A personal portfolio website designed to display information about me, my projects, and skill set.</p>
-              <p class="project-desc">Languages used: HTML5, CSS3</p>
+              <p class="body-text">A personal portfolio website designed to display information about me, my projects, and skill set.</p>
+              <p class="body-text">Languages used: HTML5, CSS3</p>
             </div>
           </div> 
 
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="calculator/calculator.html" target="_blank">
-                <img class="project-img" src="assets/calculator thumbnail.png" alt="thumbnail image of JavaScript calculator">
+                <img class="project-img" src="assets/calculator thumbnail.png" alt="thumbnail image of JavaScript calculator" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">JavaScript Calculator</h3>
-              <p class="project-desc">A simple calculator app</p>
-              <p class="project-desc">Languages used: JavaScript, HTML5, CSS3</p>
+              <p class="body-text">A simple calculator app</p>
+              <p class="body-text">Languages used: JavaScript, HTML5, CSS3</p>
               <a href="https://github.com/Mrwhit05/Javascript-Calculator" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -134,14 +140,14 @@
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="hanoi/build/index.html" target="_blank">
-                <img class="project-img" src="assets/hanoi_thumbnail.png" alt="thumbnail image of Tower of Hanoi">
+                <img class="project-img" src="assets/hanoi_thumbnail.png" alt="thumbnail image of Tower of Hanoi" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Tower of Hanoi Simulator</h3>
-              <p class="project-desc">A replication of the Tower of Hanoi game</p>
-              <p class="project-desc">Languages used: C++, SDL </p>
+              <p class="body-text">A replication of the Tower of Hanoi game</p>
+              <p class="body-text">Languages used: C++, SDL </p>
               <a href="https://github.com/Mrwhit05/Tower-of-Hanoi/" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -151,14 +157,14 @@
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="tictactoe/index.html" target="_blank">
-                <img class="project-img" src="assets/TicTacToe_thumbnail.png" alt="thumbnail of tic-tac-toe">
+                <img class="project-img" src="assets/TicTacToe_thumbnail.png" alt="thumbnail of tic-tac-toe" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Tic-Tac-Toe: Ultimate Edition</h3>
-              <p class="project-desc">A Tic-Tac-Toe game featuring both Classic and Ultimate game modes.</p>
-              <p class="project-desc">Languages used: JavaScript, HTML5, CSS3</p>
+              <p class="body-text">A Tic-Tac-Toe game featuring both Classic and Ultimate game modes.</p>
+              <p class="body-text">Languages used: JavaScript, HTML5, CSS3</p>
               <a href="https://github.com/Mrwhit05/Tic-Tac-Toe" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -168,14 +174,14 @@
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
-                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="alt text">
+                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="alt text" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
-              <p class="project-desc">Languages used: </p>
+              <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <p class="body-text">Languages used: </p>
               <a href="https://github.com/Mrwhit05/" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -184,14 +190,14 @@
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
-                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="alt text">
+                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="alt text" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
-              <p class="project-desc">Languages used: </p>
+              <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <p class="body-text">Languages used: </p>
               <a href="https://github.com/Mrwhit05/" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -199,25 +205,25 @@
           </div>
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
-                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="alt text">
+                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="alt text" loading="lazy">
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
             </div>
           </div> 
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
-                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="alt text">
+                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="alt text" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
-              <p class="project-desc">Languages used: </p>
+              <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <p class="body-text">Languages used: </p>
               <a href="https://github.com/Mrwhit05/" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -226,14 +232,14 @@
           <div class="project-tile">
             <div class="project-image">
               <a class="project-link" href="" target="_blank">
-                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="alt text">
+                <img class="project-img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="alt text" loading="lazy">
                 <div class="project-hover-text">Demo</div>
               </a> 
             </div>
             <div class="project-text"> 
               <h3 class="project-name">Project Name</h3>
-              <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
-              <p class="project-desc">Languages used: </p>
+              <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non veniam maiores veritatis iure cum, iusto accusantium, iste aliquam impedit error? Unde suscipit voluptates necessitatibus, accusantium aliquam totam atque. Sapiente.</p>
+              <p class="body-text">Languages used: </p>
               <a href="https://github.com/Mrwhit05/" target="_blank">
                 <i class="fa-brands fa-github fa-2x"></i>
               </a>
@@ -241,30 +247,31 @@
           </div>
           -->
           <div class="wip-section">
-            <h2>In Development</h2>
+            <h2 class="subsection-header">In Development</h2>
             <div class="project-tile">
               <div class="project-image">
                 <a class="project-link" href="https://mrwhit05.github.io/Weather-App/" target="_blank">
-                  <img class="project-img" src="assets/WID_prototype_thumbnail.png" alt="thumbnail snapshot of weather insight dashboard">
+                  <img class="project-img" src="assets/WID_prototype_thumbnail.png" alt="thumbnail snapshot of weather insight dashboard" loading="lazy">
                   <div class="project-hover-text">Demo</div>
                 </a> 
               </div>
               <div class="project-text"> 
                 <h3 class="project-name">Weather Insight Dashboard</h3>
-                <p class="project-desc">A web-based weather dashboard that combines detailed weather information for locations around the world, including current conditions, forecasts, weather trends, and weather alerts.</p>
-                <p class="project-desc"><strong>Status:</strong> In Progress</p>
-                <p class="project-desc"><strong>Technologies used:</strong> JavaScript, HTML, CSS, Tailwind CSS, React GeoDB Cities API, OpenWeather API</p>
-                <p class="project-desc"><strong>Goal:</strong> Build a comprehensive weather dashboard that combines detailed weather data with interactive visualizations and a polished, intuitive user experience.</p>
-                <p class="project-desc"><strong>Currently:</strong> Developing analytic features in the form of a Weather Insights engine, historical weather comparisons, multi-city analysis, and an interactive weather map to transform the dashboard from a weather application into a more comprehensive analytics platform.</p>
+                <p class="body-text">A web-based weather dashboard that combines detailed weather information for locations around the world, including current conditions, forecasts, weather trends, and weather alerts.</p>
+                <p class="body-text"><strong>Status:</strong> In Progress</p>
+                <p class="body-text"><strong>Technologies:</strong> JavaScript, HTML, CSS, Tailwind CSS, React GeoDB Cities API, OpenWeather API</p>
+                <p class="body-text"><strong>Goal:</strong> Build a comprehensive weather dashboard that combines detailed weather data with interactive visualizations and a polished, intuitive user experience.</p>
+                <p class="body-text"><strong>Currently:</strong> Developing analytic features in the form of a Weather Insights engine, historical weather comparisons, multi-city analysis, and an interactive weather map to transform the dashboard from a weather application into a more comprehensive analytics platform.</p>
                 <a href="https://github.com/Mrwhit05/Weather-App/" target="_blank">
                   <i class="fa-brands fa-github fa-2x"></i>
                 </a>
               </div>
             </div>
+          </div>
         </div>
       </section>
       <section id="contact" class="contact">
-        <h2 class="contact-header header">Contact Me</h2>
+        <h2 class="section-headers">Contact Me</h2>
         <!--<p class="contact-desc" >Have a question or want to work together. Leave your information below and I'll get back to you as soon as possible. 
         </p>-->
         <div class="contact-container">
@@ -313,16 +320,16 @@
     </main>
     <footer>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/jimmy-whitley/" id="profile-link" target="_blank">
+        <a href="https://www.linkedin.com/in/jimmy-whitley/" class="profile-link" target="_blank">
           <i class="fab fa-linkedin-in fa-2x"></i>
         </a>
-        <a href="https://www.freecodecamp.org/mrwhit05" id="profile-link" target="_blank">
+        <a href="https://www.freecodecamp.org/mrwhit05" class="profile-link" target="_blank">
           <i class="fa-brands fa-free-code-camp fa-2x"></i>
         </a>
-        <a href="https://www.github.com/Mrwhit05/" id="profile-link" target="_blank">
+        <a href="https://www.github.com/Mrwhit05/" class="profile-link" target="_blank">
           <i class="fa-brands fa-github fa-2x"></i>
         </a>
-        <a href="mailto:jdwhitley05@gmail.com" id="profile-link" target="_blank">
+        <a href="mailto:jdwhitley05@gmail.com" class="profile-link" target="_blank">
           <i class="fa-solid fa-at fa-2x"></i>
         </a>
       </div>
