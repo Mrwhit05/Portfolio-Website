@@ -60,43 +60,55 @@ a {
 header {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
+    /*padding: 20px;*/
     background-color: rgb(112, 22, 22);
     position: sticky;
     top: 0;
-    
     z-index: 10;
+
+    height: clamp(3rem, 5.05vw, 5rem);
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 15px;
+    /*padding: 15px;*/
 }
 
 nav ul {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    /*
+    justify-content: space-between;
     width: 95%;
+    */
 }
 
 nav li {
-   margin: 0 10px;
+   margin: 0;
+   display: flex;
+   /*width: 120px;*/
 }
 
 nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: clamp(0.5rem, 1.5vw, 1.375rem) clamp(0.75rem, 3vw, 3rem);
     background-color: rgb(112, 22, 22);
     /* color: white; */
     font-size: clamp(0.875rem, 1.17vw, 1.125rem);
+    text-align: center;
+
+    transition: background-color 0.2s ease;
+
+    height: 100%;
 }
 
 nav a:hover, nav a:focus-visible {
     background-color: #181719;
-    box-shadow: 0 2px 0 #181719;
 }
 
 nav a:active {
