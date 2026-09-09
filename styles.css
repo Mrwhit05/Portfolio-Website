@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("assets/CormorantGaramond-Semibold.ttf");
+}
+
 @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
@@ -58,15 +63,39 @@ a {
 
 /*Nav Bar*/
 header {
+    height: clamp(3rem, 5.05vw, 5rem);
     display: flex;
-    justify-content: flex-end;
-    /*padding: 20px;*/
+    /*justify-content: flex-end;*/
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 2rem;
+
     background-color: rgb(112, 22, 22);
     position: sticky;
     top: 0;
     z-index: 10;
+}
 
-    height: clamp(3rem, 5.05vw, 5rem);
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
+.site-logo {
+    width: clamp(4rem, 3.5vw, 5rem);
+    height: clamp(4rem, 3.5vw, 5rem);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.site-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.75rem, 2vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 nav {
@@ -123,6 +152,47 @@ nav a:active {
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    padding: 0 0.75rem;
+}
+
+@media (max-width: 768px) {
+    #menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.open {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        width: 180px;
+        margin: 0;
+        padding: 0;
+
+        background-color: rgb(112, 22, 22);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-list.open li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-list.open a {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 650px) {
@@ -175,6 +245,27 @@ nav a:active {
 
     .project-text {
         width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .site-name {
+        font-size: 1rem;
+    }
+
+    .site-logo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    header {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .site-name {
+        display: none;
     }
 }
 
